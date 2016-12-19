@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Track = ({ className, included, vertical, offset, length }) => {
+const Track = ({ className, included, vertical, offset, length, trackStyles }) => {
   const style = {
     visibility: included ? 'visible' : 'hidden',
   };
@@ -11,7 +11,9 @@ const Track = ({ className, included, vertical, offset, length }) => {
     style.left = `${offset}%`;
     style.width = `${length}%`;
   }
-  return <div className={className} style={style} />;
+
+  const customizedStyles = {...style, ...trackStyles };
+  return <div className={className} style={customizedStyles} />;
 };
 
 export default Track;

@@ -454,6 +454,7 @@ class Slider extends React.Component {
         tipTransitionName,
         tipFormatter,
         children,
+        trackStyles,
     } = this.props;
 
     const customHandle = this.props.handle;
@@ -502,7 +503,7 @@ class Slider extends React.Component {
       });
       tracks.push(
         <Track className={trackClassName} vertical={vertical} included={isIncluded}
-          offset={offsets[i - 1]} length={offsets[i] - offsets[i - 1]} key={i}
+          offset={offsets[i - 1]} length={offsets[i] - offsets[i - 1]} key={i} trackStyles={trackStyles}
         />
       );
     }
@@ -573,6 +574,7 @@ Slider.propTypes = {
     React.PropTypes.bool,
     React.PropTypes.number,
   ]),
+  trackStyles: React.PropTypes.object,
 };
 
 Slider.defaultProps = {
