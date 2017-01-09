@@ -42,7 +42,7 @@
     "test": "rc-tools run test",
     "chrome-test": "rc-tools run chrome-test",
     "coverage": "rc-tools run coverage",
-    "preinstall": "rc-tools compile"
+    "compile": "rc-tools run compile"
   },
   "devDependencies": {
     "expect.js": "0.3.x",
