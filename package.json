@@ -41,7 +41,8 @@
     "saucelabs": "rc-tools run saucelabs",
     "test": "rc-tools run test",
     "chrome-test": "rc-tools run chrome-test",
-    "coverage": "rc-tools run coverage"
+    "coverage": "rc-tools run coverage",
+    "preinstall": "rc-tools compile"
   },
   "devDependencies": {
     "expect.js": "0.3.x",
@@ -52,7 +53,6 @@
     "react-dom": "^15.2.1"
   },
   "pre-commit": [
-    "lint"
   ],
   "dependencies": {
     "babel-runtime": "6.x",
